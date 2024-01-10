@@ -1,0 +1,21 @@
+# For details & more options, see documentation/AppManifests.md in firmware repo
+
+App(
+    appid="clean_storage_viewer",  # Must be unique
+    name="Clean Storage",  # Displayed in menus
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="clean_storage_viewer_app",
+    stack_size=2 * 1024,
+    fap_category="Tools",
+    requires=[
+        "gui",
+        "storage",  # Require if we do any r/w to storage
+    ],
+    # Optional values
+    fap_version="0.1",
+    fap_icon="images/clean-storage-icon.png",  # 10x10 1-bit PNG
+    fap_description="A simple storage viewer",
+    # fap_author="DevilToasty",
+    # fap_weburl="https://github.com/user/clean_storage_viewer",
+    fap_icon_assets="images",  # Image assets to compile for this application
+)
